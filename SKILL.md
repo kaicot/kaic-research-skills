@@ -63,6 +63,56 @@ user explicitly requests another language.
 - Keep actual research data, restricted guides, identifying files, credentials,
   and manuscript-sensitive project artifacts out of this skill repository.
 
+## Reference Verification
+
+Applies to: **Manuscript mode (Introduction, Discussion)** and **Reference mode**.
+Do NOT apply to Methods, Results, statistical analysis, or code generation modes.
+
+### Pool-First Procedure
+
+When the user provides research results and requests Introduction or Discussion
+writing, build a verified reference pool before writing any prose.
+
+**Phase 1 — Build pool**
+
+1. Extract key topics and keywords from the provided results.
+2. Search PubMed MCP for each topic (primary source for health/medical/OT).
+3. If PubMed results are insufficient for a topic, call Crossref API:
+   `https://api.crossref.org/works?query=<keywords>&rows=5`
+   No API key required.
+4. If still insufficient, call Semantic Scholar:
+   `https://api.semanticscholar.org/graph/v1/paper/search?query=<keywords>&fields=title,authors,year,externalIds`
+   No API key required.
+5. Add a reference to the pool only when the DOI is confirmed and
+   title, author list, and year are complete metadata.
+6. Report pool size before writing:
+   "PubMed N건, Crossref N건, Semantic Scholar N건 — 검증된 문헌 N개 확보"
+
+**Phase 2 — Write**
+
+- Cite only pool references. APA in-text: (Author, Year) or Author (Year).
+- If a claim requires a topic with 0 pool references, note inline:
+  `[검증된 문헌 없음 — 이 주제 탐색 결과 0건]`
+- Never fabricate, guess, or use an unverified reference under any circumstances.
+
+**Phase 3 — Reference list**
+
+- List only references actually cited in the body.
+- Full APA format with a DOI line for every entry.
+- Sort alphabetically by first author surname.
+- Example entry:
+  ```
+  Kim, J., & Lee, S. (2022). Title of the article. Journal Name, 45(3), 123–135.
+  https://doi.org/10.xxxx/xxxxx
+  ```
+
+### Codex Compatibility
+
+PubMed MCP is available in Claude Code sessions. In Codex, use available web
+search tools to query PubMed (https://pubmed.ncbi.nlm.nih.gov/?term=<keywords>)
+as a fallback. Crossref and Semantic Scholar are plain HTTPS calls available in
+both environments.
+
 ## Mode Routing
 
 Read only the references needed for the active mode.
