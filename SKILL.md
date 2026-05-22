@@ -108,6 +108,12 @@ writing, build a verified reference pool before writing any prose.
   https://doi.org/10.xxxx/xxxxx
   ```
 
+### User-Supplied References
+
+If the user provides a reference manually, verify it through the same
+PubMed → Crossref → Semantic Scholar pipeline before using it. Do not include
+user-supplied references in the pool without confirmed DOI and complete metadata.
+
 ### Codex Compatibility
 
 PubMed MCP is available in Claude Code sessions. In Codex, use available web
