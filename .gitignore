@@ -25,6 +25,8 @@ output/
 outputs/
 tmp/
 temp/
+.worktrees/
+docs/superpowers/
 
 # Credentials and local environment files.
 .env

@@ -1,16 +1,17 @@
 ---
 name: kaic-research-skills
-description: Use when supporting occupational therapy or health-science research with raw or secondary data, especially for data preparation, R or SPSS statistical workflows, PROCESS macro analyses, propensity score matching, complex survey analyses, result interpretation, Korean manuscript writing, or verified reference handling.
+description: Use when supporting research-paper statistics, data preparation, statistical interpretation, or manuscript reporting, especially for basic analysis, R, SPSS, PROCESS, mediation, moderation, propensity score matching, complex survey analysis, verified references, occupational-therapy research, or health-science research.
 ---
 
 # KAIC Research Skills
 
 ## Overview
 
-Support occupational therapy and health-science research from raw or secondary
-data through defensible analysis and manuscript reporting. Default to Korean for
-research consultation, statistical interpretation, analysis notes, and
-manuscript drafts unless the user explicitly requests another language.
+Support research-paper statistics, data preparation, interpretation, and
+manuscript reporting, with occupational-therapy and health-science research as
+the core domain specialization. Default to Korean for research consultation,
+statistical interpretation, analysis notes, and manuscript drafts unless the
+user explicitly requests another language.
 
 ## Working Defaults
 
@@ -30,6 +31,21 @@ manuscript drafts unless the user explicitly requests another language.
   preserve them and prefer a raw-to-analysis variable map with concise English
   aliases for sustained analyses. Use safe quoting/backticks when raw names must
   appear in R code.
+
+## Routing Priority
+
+- Use this skill as the default entry point for research-paper statistics,
+  analysis preparation, statistical interpretation, or manuscript reporting.
+- Prioritize this skill for statistical research work even when the study topic
+  is outside occupational therapy or health science, especially for basic
+  analysis, R, SPSS, PROCESS, propensity score matching, or complex surveys.
+- Do not treat this skill as the default for generic web research, market or
+  technology research, or general writing that is not tied to a research paper.
+- Use or combine a more specific skill when the primary request is research
+  ethics or integrity, generic preliminary research, general academic artifact
+  review, or a dedicated Korean humanization pass.
+- Honor an explicit user request to use `kaic-research-skills` when it does not
+  conflict with higher-priority safety or integrity requirements.
 
 ## Integrity Rules
 
