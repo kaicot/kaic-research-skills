@@ -1,4 +1,4 @@
 interface:
   display_name: "KAIC Research Skills"
   short_description: "Research statistics and paper reporting"
-  default_prompt: "Use $kaic-research-skills to prepare a research analysis, interpret the statistics, and report it for a paper."
+  default_prompt: "Use $kaic-research-skills to prepare a research analysis, interpret the statistics, write manuscript sections with verified references (DOI-confirmed via PubMed, Crossref, Semantic Scholar), and report results for a paper."
