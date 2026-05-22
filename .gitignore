@@ -1,0 +1,32 @@
+# Keep the skill repository focused on skill instructions and templates.
+*.csv
+*.tsv
+*.sav
+*.zsav
+*.por
+*.xlsx
+*.xls
+*.rds
+*.RData
+*.Rhistory
+
+# Research artifacts and rendered outputs.
+*.docx
+*.hwp
+*.hwpx
+*.pdf
+*.html
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.log
+output/
+outputs/
+tmp/
+temp/
+
+# Credentials and local environment files.
+.env
+*.key
+*.pem

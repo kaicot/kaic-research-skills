@@ -1,0 +1,4 @@
+interface:
+  display_name: "KAIC Research Skills"
+  short_description: "Health data analysis and Korean manuscripts"
+  default_prompt: "Use $kaic-research-skills to plan, analyze, and report a secondary health-data study."
