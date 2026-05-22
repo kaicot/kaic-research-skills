@@ -1,120 +1,133 @@
 # KAIC Research Skills
 
-  Private Agent Skill package for occupational therapy and health-science research workflows, designed for use with Codex and Claude Code.
+Agent Skill package for occupational therapy and health-science research
+workflows, designed for use with Codex and Claude Code.
 
-  `kaic-research-skills` provides reusable guidance and editable templates for research tasks such as:
+`kaic-research-skills` provides reusable guidance and editable templates for
+research tasks such as:
 
-  - data preparation and derived-variable planning
-  - R and SPSS statistical workflows
-  - PROCESS macro, propensity score matching, and complex survey analysis support
-  - statistical result interpretation
-  - Korean manuscript reporting support
-  - verified reference and citation handling
+- data preparation and derived-variable planning
+- R and SPSS statistical workflows
+- PROCESS macro, propensity score matching, and complex survey analysis support
+- statistical result interpretation
+- Korean manuscript reporting support
+- verified reference and citation handling
 
-  ## Repository Structure
+## Repository Structure
 
-  - `SKILL.md` - main skill rules, routing, and working defaults
-  - `references/` - focused guidance for research workflows
-  - `scripts/` - editable R analysis templates
-  - `agents/` - agent metadata
-  - `docs/` - design and planning notes
+- `SKILL.md` - main skill rules, routing, and working defaults
+- `references/` - focused guidance for research workflows
+- `scripts/` - editable R analysis templates
+- `agents/` - agent metadata
 
-  ## Scope and Data Safety
+## Scope and Data Safety
 
-  This repository is intended for reusable research-support instructions and analysis templates.
+This repository is intended for reusable research-support instructions and
+analysis templates.
 
-  Do not store the following materials in this repository:
+Do not store the following materials in this repository:
 
-  - raw or restricted research data
-  - identifiable participant information
-  - unpublished manuscript-sensitive project files
-  - credentials, tokens, or private study documents
+- raw or restricted research data
+- identifiable participant information
+- unpublished manuscript-sensitive project files
+- credentials, tokens, or private study documents
 
-  ## Usage
+## Usage
 
-  This skill package is managed as a filesystem-based Agent Skill and is intended for use with Codex and Claude Code.
+This skill package is managed as a filesystem-based Agent Skill and is intended
+for use with Codex and Claude Code.
 
-  ### Codex
+### Codex
 
-  Install or link this repository under the Codex skills directory, then use it for occupational therapy or health-science research tasks that require
-  Example location: `~/.codex/skills/kaic-research-skills/`
+Install or link this repository under the Codex skills directory, then use it
+for occupational therapy or health-science research tasks that require analysis
+planning, statistical workflow support, result interpretation, or
+manuscript-facing reporting guidance.
 
-  ### Claude Code
+Example location: `~/.codex/skills/kaic-research-skills/`
 
-  Install or clone this repository under the Claude Code personal skills directory.
+### Claude Code
 
-  Example location: `~/.claude/skills/kaic-research-skills/`
+Install or clone this repository under the Claude Code personal skills
+directory.
 
-  Claude Code should be able to find the main skill file at:
+Example location: `~/.claude/skills/kaic-research-skills/`
 
-  `~/.claude/skills/kaic-research-skills/SKILL.md`
+Claude Code should be able to find the main skill file at:
 
-  The main behavior and routing rules are defined in `SKILL.md`.
+`~/.claude/skills/kaic-research-skills/SKILL.md`
 
-  ## Status
+The main behavior and routing rules are defined in `SKILL.md`.
 
-  Initial private working version.
+## Status
 
-  ---
+Initial working version.
 
-  ## 한국어 안내
+---
 
-  `KAIC Research Skills`는 작업치료 및 보건의료 연구 작업을 지원하기 위한 private Agent Skill 패키지입니다.
+## 한국어 안내
 
-  이 저장소의 `kaic-research-skills`는 Codex와 Claude Code에서 활용할 수 있도록 구성되어 있으며, 반복적으로 사용할 수 있는 연구 지침과 분석 템플릿을 제공합
-  니다.
+`KAIC Research Skills`는 작업치료 및 보건의료 연구 작업을 지원하기 위한
+Agent Skill 패키지입니다.
 
-  주로 다음과 같은 작업을 지원합니다.
+이 저장소의 `kaic-research-skills`는 Codex와 Claude Code에서 활용할 수
+있도록 구성되어 있으며, 반복적으로 사용할 수 있는 연구 지침과 분석
+템플릿을 제공합니다.
 
-  - 자료 정리 및 파생변수 설계
-  - R 및 SPSS 기반 통계 분석 흐름
-  - PROCESS macro, 성향점수매칭, 복합표본분석 관련 지원
-  - 통계 결과 해석
-  - 한국어 논문 보고 및 문장 작성 지원
-  - 검증된 참고문헌 및 인용 정보 처리
+주로 다음과 같은 작업을 지원합니다.
 
-  ## 저장소 구성
+- 자료 정리 및 파생변수 설계
+- R 및 SPSS 기반 통계 분석 흐름
+- PROCESS macro, 성향점수매칭, 복합표본분석 관련 지원
+- 통계 결과 해석
+- 한국어 논문 보고 및 문장 작성 지원
+- 검증된 참고문헌 및 인용 정보 처리
 
-  - `SKILL.md` - 스킬의 핵심 규칙, 작업 분기, 기본 원칙
-  - `references/` - 연구 작업별 세부 지침
-  - `scripts/` - 수정하여 사용할 수 있는 R 분석 템플릿
-  - `agents/` - 에이전트 메타데이터
-  - `docs/` - 설계 및 작업 계획 문서
+## 저장소 구성
 
-  ## 범위와 자료 관리
+- `SKILL.md` - 스킬의 핵심 규칙, 작업 분기, 기본 원칙
+- `references/` - 연구 작업별 세부 지침
+- `scripts/` - 수정하여 사용할 수 있는 R 분석 템플릿
+- `agents/` - 에이전트 메타데이터
 
-  이 저장소는 재사용 가능한 연구 지원 지침과 분석 템플릿을 관리하기 위한 저장소입니다.
+## 범위와 자료 관리
 
-  다음 자료는 이 저장소에 저장하지 않습니다.
+이 저장소는 재사용 가능한 연구 지원 지침과 분석 템플릿을 관리하기 위한
+저장소입니다.
 
-  - 원자료 또는 접근이 제한된 연구자료
-  - 연구참여자를 식별할 수 있는 정보
-  - 공개 전 원고 등 민감한 연구 산출물
-  - 계정 정보, 인증 토큰, 비공개 연구 문서
+다음 자료는 이 저장소에 저장하지 않습니다.
 
-  ## 사용
+- 원자료 또는 접근이 제한된 연구자료
+- 연구참여자를 식별할 수 있는 정보
+- 공개 전 원고 등 민감한 연구 산출물
+- 계정 정보, 인증 토큰, 비공개 연구 문서
 
-  이 스킬 패키지는 파일시스템 기반 Agent Skill로 관리되며, Codex와 Claude Code에서 사용할 수 있도록 구성되어 있습니다.
+## 사용
 
-  ### Codex
+이 스킬 패키지는 파일시스템 기반 Agent Skill로 관리되며, Codex와 Claude
+Code에서 사용할 수 있도록 구성되어 있습니다.
 
-  Codex 스킬 디렉터리에 이 저장소를 설치하거나 연결한 뒤, 작업치료 및 보건의료 연구와 관련된 분석 계획, 통계 작업 흐름, 결과 해석, 논문 보고 지원이 필요할
-  때 사용합니다.
+### Codex
 
-  예시 경로: `~/.codex/skills/kaic-research-skills/`
+Codex 스킬 디렉터리에 이 저장소를 설치하거나 연결한 뒤, 작업치료 및
+보건의료 연구와 관련된 분석 계획, 통계 작업 흐름, 결과 해석, 논문 보고
+지원이 필요할 때 사용합니다.
 
-  ### Claude Code
+예시 경로: `~/.codex/skills/kaic-research-skills/`
 
-  Claude Code 개인 스킬 디렉터리에 이 저장소를 설치하거나 clone하여 사용합니다.
+### Claude Code
 
-  예시 경로: `~/.claude/skills/kaic-research-skills/`
+Claude Code 개인 스킬 디렉터리에 이 저장소를 설치하거나 clone하여
+사용합니다.
 
-  Claude Code에서 핵심 스킬 파일은 다음 위치에 있어야 합니다.
+예시 경로: `~/.claude/skills/kaic-research-skills/`
 
-  `~/.claude/skills/kaic-research-skills/SKILL.md`
+Claude Code에서 핵심 스킬 파일은 다음 위치에 있어야 합니다.
 
-  스킬의 핵심 동작 방식과 작업 분기 규칙은 `SKILL.md`에 정의되어 있습니다.
+`~/.claude/skills/kaic-research-skills/SKILL.md`
 
-  ## 상태
+스킬의 핵심 동작 방식과 작업 분기 규칙은 `SKILL.md`에 정의되어 있습니다.
 
-  초기 private 작업 버전입니다.
+## 상태
+
+초기 작업 버전입니다.
