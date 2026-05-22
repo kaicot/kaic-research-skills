@@ -11,7 +11,8 @@ research tasks such as:
 - PROCESS macro, propensity score matching, and complex survey analysis support
 - statistical result interpretation
 - Korean manuscript reporting support
-- verified reference and citation handling
+- pool-first reference verification (PubMed → Crossref → Semantic Scholar, DOI-confirmed only)
+- APA citation and reference list generation with verified DOIs
 
 ## Repository Structure
 
@@ -59,9 +60,23 @@ Claude Code should be able to find the main skill file at:
 
 The main behavior and routing rules are defined in `SKILL.md`.
 
+## Reference Verification
+
+When writing Introduction or Discussion sections, the skill automatically builds
+a verified reference pool before writing any prose:
+
+1. **PubMed MCP** — primary source for health/medical/OT literature
+2. **Crossref API** — all-discipline DOI verification (no API key required)
+3. **Semantic Scholar** — supplemental coverage (no API key required)
+
+Only references with a confirmed DOI and complete metadata (title, authors, year)
+are added to the pool. The skill reports pool size before writing and never
+fabricates or guesses references. User-supplied references go through the same
+pipeline before use.
+
 ## Status
 
-Initial working version.
+Reference verification added (pool-first, three-tier).
 
 ---
 
@@ -81,7 +96,8 @@ Agent Skill 패키지입니다.
 - PROCESS macro, 성향점수매칭, 복합표본분석 관련 지원
 - 통계 결과 해석
 - 한국어 논문 보고 및 문장 작성 지원
-- 검증된 참고문헌 및 인용 정보 처리
+- 3단계 참고문헌 검증 (PubMed → Crossref → Semantic Scholar, DOI 확인 필수)
+- 검증된 문헌만 사용한 APA 인용 및 레퍼런스 목록 생성
 
 ## 저장소 구성
 
@@ -128,6 +144,18 @@ Claude Code에서 핵심 스킬 파일은 다음 위치에 있어야 합니다.
 
 스킬의 핵심 동작 방식과 작업 분기 규칙은 `SKILL.md`에 정의되어 있습니다.
 
+## 참고문헌 검증
+
+서론·고찰 작성 시, 본문을 쓰기 전에 검증된 문헌 풀을 먼저 구축합니다.
+
+1. **PubMed MCP** — 보건/의학/작업치료 분야 1차 탐색
+2. **Crossref API** — 전 분야 DOI 검증 (API 키 불필요)
+3. **Semantic Scholar** — 보완 탐색 (API 키 불필요)
+
+DOI가 확인되고 제목·저자·연도 메타데이터가 완전한 문헌만 풀에 등록됩니다.
+작성 전 확보된 문헌 수를 보고하며, 문헌을 임의로 생성하거나 추측하지 않습니다.
+사용자가 직접 제공한 문헌도 동일한 파이프라인으로 검증합니다.
+
 ## 상태
 
-초기 작업 버전입니다.
+참고문헌 검증 기능 추가 (풀 우선 방식, 3단계 검증).
