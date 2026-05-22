@@ -9,12 +9,20 @@
 
 ## Reference Integrity
 
-- Search or inspect supplied sources before presenting references as verified.
-- Do not invent or silently complete author lists, years, titles, journals,
+All references used in Introduction or Discussion writing must pass pool-first
+verification (see `SKILL.md ## Reference Verification`). The rules below apply
+to all modes.
+
+- Never invent or silently complete author lists, years, titles, journals,
   volumes, pages, article numbers, or DOIs.
-- Include DOI metadata when verified. If DOI metadata cannot be verified, say so.
-- Keep a clear boundary between verified references, user-supplied but unchecked
-  references, and candidate literature requiring review.
+- A reference is verified when its DOI resolves and title, author list, and year
+  are confirmed. Unverified references must not appear in manuscript output.
+- Keep a clear boundary between verified pool references, user-supplied but
+  unchecked references, and candidate literature requiring review.
+- If the user supplies a reference manually, verify it through the same
+  PubMed → Crossref → Semantic Scholar pipeline before using it.
+- When DOI metadata cannot be confirmed after all three tiers, exclude the
+  reference and note the gap to the user.
 
 ## Introduction and Discussion Literature
 
