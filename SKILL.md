@@ -77,14 +77,16 @@ writing, build a verified reference pool before writing any prose.
 
 1. Extract key topics and keywords from the provided results.
 2. Search PubMed MCP for each topic (primary source for health/medical/OT).
-3. If PubMed results are insufficient for a topic, call Crossref API:
+3. If PubMed returns fewer than 3 verified references for a topic, call Crossref API:
    `https://api.crossref.org/works?query=<keywords>&rows=5`
    No API key required.
-4. If still insufficient, call Semantic Scholar:
+4. If combined PubMed and Crossref results are still fewer than 3, call Semantic Scholar:
    `https://api.semanticscholar.org/graph/v1/paper/search?query=<keywords>&fields=title,authors,year,externalIds`
    No API key required.
 5. Add a reference to the pool only when the DOI is confirmed and
    title, author list, and year are complete metadata.
+   Confirmed means the DOI is returned as a primary identifier in the PubMed
+   or Crossref response, or resolves via `https://doi.org/<DOI>` without error.
 6. Report pool size before writing:
    "PubMed N건, Crossref N건, Semantic Scholar N건 — 검증된 문헌 N개 확보"
 
