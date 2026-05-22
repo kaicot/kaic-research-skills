@@ -37,37 +37,32 @@
   ### Codex
 
   Install or link this repository under the Codex skills directory, then use it for occupational therapy or health-science research tasks that require
-  analysis planning, statistical workflow support, result interpretation, or manuscript-facing reporting guidance.
-
-  Example location:
-
-  ```text
-  ~/.codex/skills/kaic-research-skills/
+  Example location: `~/.codex/skills/kaic-research-skills/`
 
   ### Claude Code
 
   Install or clone this repository under the Claude Code personal skills directory.
 
-  ~/.claude/skills/kaic-research-skills/
+  Example location: `~/.claude/skills/kaic-research-skills/`
 
   Claude Code should be able to find the main skill file at:
 
-  ~/.claude/skills/kaic-research-skills/SKILL.md
+  `~/.claude/skills/kaic-research-skills/SKILL.md`
 
-  The main behavior and routing rules are defined in SKILL.md.
+  The main behavior and routing rules are defined in `SKILL.md`.
 
   ## Status
 
   Initial private working version.
 
-  ———
+  ---
 
   ## 한국어 안내
 
-  KAIC Research Skills는 작업치료 및 보건의료 연구 작업을 지원하기 위한 private Agent Skill 패키지입니다.
+  `KAIC Research Skills`는 작업치료 및 보건의료 연구 작업을 지원하기 위한 private Agent Skill 패키지입니다.
 
-  이 저장소의 kaic-research-skills는 Codex와 Claude Code에서 활용할 수 있도록 구성되어 있으며, 반복적으로 사용할 수 있는 연구 지침과 분석 템플릿을 제공합니
-  다.
+  이 저장소의 `kaic-research-skills`는 Codex와 Claude Code에서 활용할 수 있도록 구성되어 있으며, 반복적으로 사용할 수 있는 연구 지침과 분석 템플릿을 제공합
+  니다.
 
   주로 다음과 같은 작업을 지원합니다.
 
@@ -80,11 +75,11 @@
 
   ## 저장소 구성
 
-  - SKILL.md - 스킬의 핵심 규칙, 작업 분기, 기본 원칙
-  - references/ - 연구 작업별 세부 지침
-  - scripts/ - 수정하여 사용할 수 있는 R 분석 템플릿
-  - agents/ - 에이전트 메타데이터
-  - docs/ - 설계 및 작업 계획 문서
+  - `SKILL.md` - 스킬의 핵심 규칙, 작업 분기, 기본 원칙
+  - `references/` - 연구 작업별 세부 지침
+  - `scripts/` - 수정하여 사용할 수 있는 R 분석 템플릿
+  - `agents/` - 에이전트 메타데이터
+  - `docs/` - 설계 및 작업 계획 문서
 
   ## 범위와 자료 관리
 
@@ -106,23 +101,19 @@
   Codex 스킬 디렉터리에 이 저장소를 설치하거나 연결한 뒤, 작업치료 및 보건의료 연구와 관련된 분석 계획, 통계 작업 흐름, 결과 해석, 논문 보고 지원이 필요할
   때 사용합니다.
 
-  예시 경로:
-
-  ~/.codex/skills/kaic-research-skills/
+  예시 경로: `~/.codex/skills/kaic-research-skills/`
 
   ### Claude Code
 
   Claude Code 개인 스킬 디렉터리에 이 저장소를 설치하거나 clone하여 사용합니다.
 
-  예시 경로:
-
-  ~/.claude/skills/kaic-research-skills/
+  예시 경로: `~/.claude/skills/kaic-research-skills/`
 
   Claude Code에서 핵심 스킬 파일은 다음 위치에 있어야 합니다.
 
-  ~/.claude/skills/kaic-research-skills/SKILL.md
+  `~/.claude/skills/kaic-research-skills/SKILL.md`
 
-  스킬의 핵심 동작 방식과 작업 분기 규칙은 SKILL.md에 정의되어 있습니다.
+  스킬의 핵심 동작 방식과 작업 분기 규칙은 `SKILL.md`에 정의되어 있습니다.
 
   ## 상태
 
