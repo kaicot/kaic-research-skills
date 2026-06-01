@@ -10,16 +10,17 @@ research tasks such as:
 - R and SPSS statistical workflows
 - PROCESS macro, propensity score matching, and complex survey analysis support
 - statistical result interpretation
+- APA-formatted Word table generation from SPSS / R / PROCESS output (`.docx`, `flextable` + `officer`)
 - Korean manuscript reporting support
 - pool-first reference verification (PubMed → Crossref → Semantic Scholar, DOI-confirmed only)
 - APA citation and reference list generation with verified DOIs
 
 ## Repository Structure
 
-- `SKILL.md` - main skill rules, routing, and working defaults
-- `references/` - focused guidance for research workflows
-- `scripts/` - editable R analysis templates
-- `agents/` - agent metadata
+- `SKILL.md` — main skill rules, mode routing, and working defaults
+- `references/` — focused guidance per mode (statistical analysis, manuscript writing, APA table formatting, etc.)
+- `scripts/` — editable R templates (analysis, PSM, survey, APA Word tables)
+- `agents/` — agent metadata
 
 ## Scope and Data Safety
 
@@ -74,8 +75,24 @@ are added to the pool. The skill reports pool size before writing and never
 fabricates or guesses references. User-supplied references go through the same
 pipeline before use.
 
+## APA Table Mode
+
+Paste SPSS, R, or PROCESS output and ask for an APA-formatted table — the skill
+generates a complete, ready-to-run R script that produces a `.docx` file:
+
+- Supported table types: descriptive statistics, t-test, one-way ANOVA,
+  correlation matrix, regression (simple / hierarchical), mediation (PROCESS)
+- APA 7th edition formatting: bold table number, italic title, horizontal borders
+  only, centered column headings, left-aligned stub column
+- Three note types: general (`Note.`), specific (superscript letters), probability
+  (`*p < .05`)
+- Requires R packages: `flextable`, `officer`
+
+See `references/apa-table-formatting.md` and `scripts/apa_table_template.R`.
+
 ## Status
 
+Table mode added (APA Word table generation from statistical output).
 Reference verification added (pool-first, three-tier).
 
 ---
@@ -95,16 +112,17 @@ Agent Skill 패키지입니다.
 - R 및 SPSS 기반 통계 분석 흐름
 - PROCESS macro, 성향점수매칭, 복합표본분석 관련 지원
 - 통계 결과 해석
+- SPSS / R / PROCESS 출력 → APA 양식 Word 표 자동 생성 (`.docx`, `flextable` + `officer`)
 - 한국어 논문 보고 및 문장 작성 지원
 - 3단계 참고문헌 검증 (PubMed → Crossref → Semantic Scholar, DOI 확인 필수)
 - 검증된 문헌만 사용한 APA 인용 및 레퍼런스 목록 생성
 
 ## 저장소 구성
 
-- `SKILL.md` - 스킬의 핵심 규칙, 작업 분기, 기본 원칙
-- `references/` - 연구 작업별 세부 지침
-- `scripts/` - 수정하여 사용할 수 있는 R 분석 템플릿
-- `agents/` - 에이전트 메타데이터
+- `SKILL.md` — 스킬의 핵심 규칙, 모드 분기, 기본 원칙
+- `references/` — 모드별 세부 지침 (통계 분석, 논문 작성, APA 표 포맷 등)
+- `scripts/` — 수정하여 사용할 수 있는 R 분석 템플릿 (분석, 성향점수, 복합표본, APA Word 표)
+- `agents/` — 에이전트 메타데이터
 
 ## 범위와 자료 관리
 
@@ -156,6 +174,19 @@ DOI가 확인되고 제목·저자·연도 메타데이터가 완전한 문헌�
 작성 전 확보된 문헌 수를 보고하며, 문헌을 임의로 생성하거나 추측하지 않습니다.
 사용자가 직접 제공한 문헌도 동일한 파이프라인으로 검증합니다.
 
+## APA 표 모드
+
+SPSS, R, PROCESS 출력 결과를 붙여넣고 "APA 표로 만들어줘"라고 하면,
+스킬이 완성된 R 스크립트를 생성하고 실행 시 `.docx` 파일이 저장됩니다.
+
+- 지원 표 유형: 기술통계, t-검정, 일원분산분석, 상관행렬, 회귀분석(단순/위계), 매개분석(PROCESS)
+- APA 7판 형식: 굵은 표 번호, 이탤릭 제목, 가로선만 사용, 헤딩 가운데 정렬, stub 열 왼쪽 정렬
+- 주석 3종: 일반 주석(`Note.`), 개별 주석(위첨자 알파벳), 유의확률 주석(`*p < .05`)
+- 필요 R 패키지: `flextable`, `officer`
+
+`references/apa-table-formatting.md` 및 `scripts/apa_table_template.R` 참조.
+
 ## 상태
 
+Table 모드 추가 (통계 출력 → APA Word 표 생성).
 참고문헌 검증 기능 추가 (풀 우선 방식, 3단계 검증).
