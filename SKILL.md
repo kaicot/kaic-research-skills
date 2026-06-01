@@ -134,6 +134,7 @@ Read only the references needed for the active mode.
 | Interpret | The user supplies SPSS, PROCESS, R, or result-table output. | `references/result-interpretation-and-reporting.md` |
 | Manuscript | The user wants Methods, Results, Introduction, Discussion, or manuscript revision. | `references/manuscript-writing.md` |
 | Reference | The user wants citations, DOI checks, APA references, or journal-style references. | `references/references-and-journal-styles.md` |
+| Table | The user pastes statistical output and requests an APA-formatted table as a .docx file. | `references/apa-table-formatting.md` |
 
 For mode selection details and common mode combinations, read
 `references/modes-and-routing.md`.
@@ -179,6 +180,7 @@ Use scripts as editable templates, not blind automation:
 - `scripts/table1_template.R`: Table 1 skeleton.
 - `scripts/psm_template.R`: propensity score matching skeleton.
 - `scripts/survey_template.R`: complex survey skeleton.
+- `scripts/apa_table_template.R`: APA-formatted Word table builder (flextable + officer).
 
 ## Output Contract
 

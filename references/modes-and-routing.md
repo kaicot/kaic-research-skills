@@ -21,6 +21,9 @@
 - Use `Manuscript` when the deliverable is paper-facing prose or revision.
 - Use `Reference` when citations, DOI verification, APA formatting, or a journal
   reference style matter.
+- Use `Table` when the user pastes statistical output (SPSS, R, PROCESS, manual
+  values) and requests a ready-to-edit APA-formatted table delivered as a .docx
+  file.
 
 ## Mode Combinations
 
@@ -31,6 +34,8 @@ Combine modes when the work naturally crosses them:
 - PROCESS output plus Results paragraph -> `Interpret` then `Manuscript`.
 - Introduction or Discussion with citations -> `Manuscript` plus `Reference`.
 - Journal author guidelines plus reference list -> `Reference`.
+- Statistical output plus "make APA table" -> `Table` (then `Interpret` if the
+  user also wants a written interpretation).
 
 Name the current mode only when doing so clarifies a multi-step answer.
 
