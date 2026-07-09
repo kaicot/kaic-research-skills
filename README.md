@@ -9,6 +9,7 @@ research tasks such as:
 - data preparation and derived-variable planning
 - R and SPSS statistical workflows
 - PROCESS macro, propensity score matching, and complex survey analysis support
+- KCHS / 지역사회건강조사 routing through the private `kaic-chs-analysis` skill
 - statistical result interpretation
 - APA-formatted Word table generation from SPSS / R / PROCESS output (`.docx`, `flextable` + `officer`)
 - Korean manuscript reporting support
@@ -61,6 +62,13 @@ Claude Code should be able to find the main skill file at:
 
 The main behavior and routing rules are defined in `SKILL.md`.
 
+## KCHS Integration
+
+For Korea Community Health Survey (KCHS, 지역사회건강조사) work, this skill acts
+as the research workflow layer and delegates KCHS-specific design, missing-code,
+scoring, SPSS complex-samples, and PROCESS limitations to the private
+`kaic-chs-analysis` skill.
+
 ## Reference Verification
 
 When writing Introduction or Discussion sections, the skill automatically builds
@@ -90,10 +98,44 @@ generates a complete, ready-to-run R script that produces a `.docx` file:
 
 See `references/apa-table-formatting.md` and `scripts/apa_table_template.R`.
 
+## Versioning and Updates
+
+Version source of truth: Git tags on `main`.
+
+Check the installed version if this repo is installed as a git checkout:
+
+```bash
+git -C ~/.codex/skills/kaic-research-skills describe --tags --always
+```
+
+Update a git-based install:
+
+```bash
+git -C ~/.codex/skills/kaic-research-skills pull --ff-only
+```
+
+If the skill was installed as a plain copied folder, replace or reinstall the
+folder; a copied install cannot report its version.
+
+Release rule:
+
+- Patch: wording, documentation, templates, or checklist-level changes.
+- Minor: new mode, reference, script, or cross-skill routing.
+- Major: renamed files, removed modes, or behavior that can break existing prompts.
+
+Release checklist:
+
+```bash
+PYTHONUTF8=1 python ~/.codex/skills/.system/skill-creator/scripts/quick_validate.py ~/.codex/skills/kaic-research-skills
+git tag -a vX.Y.Z -m "vX.Y.Z"
+git push origin main --follow-tags
+```
+
 ## Status
 
 Table mode added (APA Word table generation from statistical output).
 Reference verification added (pool-first, three-tier).
+KCHS routing added through `kaic-chs-analysis`.
 
 ---
 
@@ -111,6 +153,7 @@ Agent Skill 패키지입니다.
 - 자료 정리 및 파생변수 설계
 - R 및 SPSS 기반 통계 분석 흐름
 - PROCESS macro, 성향점수매칭, 복합표본분석 관련 지원
+- 비공개 `kaic-chs-analysis` 스킬과 연동한 KCHS / 지역사회건강조사 라우팅
 - 통계 결과 해석
 - SPSS / R / PROCESS 출력 → APA 양식 Word 표 자동 생성 (`.docx`, `flextable` + `officer`)
 - 한국어 논문 보고 및 문장 작성 지원
@@ -162,6 +205,12 @@ Claude Code에서 핵심 스킬 파일은 다음 위치에 있어야 합니다.
 
 스킬의 핵심 동작 방식과 작업 분기 규칙은 `SKILL.md`에 정의되어 있습니다.
 
+## KCHS 연동
+
+KCHS / 지역사회건강조사 작업에서는 이 스킬이 연구 흐름, 해석, 논문 보고를
+담당하고, KCHS 고유의 설계변수, 결측 코드, 점수화, SPSS 복합표본 syntax,
+PROCESS 제한은 비공개 `kaic-chs-analysis` 스킬에 위임합니다.
+
 ## 참고문헌 검증
 
 서론·고찰 작성 시, 본문을 쓰기 전에 검증된 문헌 풀을 먼저 구축합니다.
@@ -186,7 +235,22 @@ SPSS, R, PROCESS 출력 결과를 붙여넣고 "APA 표로 만들어줘"라고 �
 
 `references/apa-table-formatting.md` 및 `scripts/apa_table_template.R` 참조.
 
+## 버전관리와 업데이트
+
+버전 기준은 `main` 브랜치의 Git tag입니다.
+
+git checkout으로 설치된 경우:
+
+```bash
+git -C ~/.codex/skills/kaic-research-skills describe --tags --always
+git -C ~/.codex/skills/kaic-research-skills pull --ff-only
+```
+
+단순 복사로 설치된 경우에는 버전 확인이 불가능하므로 폴더를 교체하거나 다시
+설치합니다.
+
 ## 상태
 
 Table 모드 추가 (통계 출력 → APA Word 표 생성).
 참고문헌 검증 기능 추가 (풀 우선 방식, 3단계 검증).
+KCHS 라우팅 추가 (`kaic-chs-analysis` 연동).
