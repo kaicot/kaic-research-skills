@@ -3,6 +3,10 @@
 Agent Skill package for occupational therapy and health-science research
 workflows, designed for use with Codex and Claude Code.
 
+Current version: `v0.1.1`
+
+Version source of truth: Git tags and GitHub Releases on `main`.
+
 `kaic-research-skills` provides reusable guidance and editable templates for
 research tasks such as:
 
@@ -42,12 +46,16 @@ for use with Codex and Claude Code.
 
 ### Codex
 
-Install or link this repository under the Codex skills directory, then use it
-for occupational therapy or health-science research tasks that require analysis
-planning, statistical workflow support, result interpretation, or
-manuscript-facing reporting guidance.
+Install or link this repository under the Codex skills directory. Prefer a git
+checkout so version checks and updates work:
 
-Example location: `~/.codex/skills/kaic-research-skills/`
+```bash
+git clone https://github.com/kaicot/kaic-research-skills.git ~/.codex/skills/kaic-research-skills
+```
+
+Then use it for occupational therapy or health-science research tasks that
+require analysis planning, statistical workflow support, result interpretation,
+or manuscript-facing reporting guidance.
 
 ### Claude Code
 
@@ -61,6 +69,34 @@ Claude Code should be able to find the main skill file at:
 `~/.claude/skills/kaic-research-skills/SKILL.md`
 
 The main behavior and routing rules are defined in `SKILL.md`.
+
+## For Agents
+
+Use this order when installing, updating, or invoking the skill:
+
+1. Install or update the folder as a git checkout when possible; copied folders
+   cannot report their version.
+2. Check the installed version with `git describe --tags --always`.
+3. Read `SKILL.md` before acting on research-analysis, interpretation, table,
+   or manuscript requests.
+4. Use the mode routing table in `SKILL.md` to choose the minimum required
+   reference file.
+5. Load only the focused references needed for the active mode.
+6. For KCHS / 지역사회건강조사 work, confirm the private companion skill
+   `kaic-chs-analysis` is installed and use it as the source of truth for
+   KCHS design variables, missing codes, scoring, SPSS complex-samples syntax,
+   and PROCESS limitations.
+7. If KCHS work is requested and `kaic-chs-analysis` is missing, install it
+   from its private GitHub repository with credentials before proceeding.
+8. Validate with `quick_validate.py` before tagging or publishing a release.
+
+Safety rules for agents:
+
+- Do not store raw or restricted data, identifiable participant information,
+  unpublished manuscripts, credentials, or private study documents here.
+- Do not duplicate private KCHS implementation detail from `kaic-chs-analysis`
+  into this public repository.
+- Do not replace verified-reference rules with unverified citation guesses.
 
 ## KCHS Integration
 
@@ -100,8 +136,6 @@ See `references/apa-table-formatting.md` and `scripts/apa_table_template.R`.
 
 ## Versioning and Updates
 
-Version source of truth: Git tags on `main`.
-
 Check the installed version if this repo is installed as a git checkout:
 
 ```bash
@@ -131,11 +165,12 @@ git tag -a vX.Y.Z -m "vX.Y.Z"
 git push origin main --follow-tags
 ```
 
-## Status
+## Release History
 
-Table mode added (APA Word table generation from statistical output).
-Reference verification added (pool-first, three-tier).
-KCHS routing added through `kaic-chs-analysis`.
+| Version | Date | Summary |
+|---|---:|---|
+| `v0.1.1` | 2026-07-09 | Added agent-facing install/use guidance, release history, and refreshed agent metadata. |
+| `v0.1.0` | 2026-07-09 | Initial versioned baseline with reference verification, APA table mode, and KCHS routing to `kaic-chs-analysis`. |
 
 ---
 
@@ -147,6 +182,10 @@ Agent Skill 패키지입니다.
 이 저장소의 `kaic-research-skills`는 Codex와 Claude Code에서 활용할 수
 있도록 구성되어 있으며, 반복적으로 사용할 수 있는 연구 지침과 분석
 템플릿을 제공합니다.
+
+현재 버전: `v0.1.1`
+
+버전 기준: `main` 브랜치의 Git tag와 GitHub Release
 
 주로 다음과 같은 작업을 지원합니다.
 
@@ -186,11 +225,15 @@ Code에서 사용할 수 있도록 구성되어 있습니다.
 
 ### Codex
 
-Codex 스킬 디렉터리에 이 저장소를 설치하거나 연결한 뒤, 작업치료 및
-보건의료 연구와 관련된 분석 계획, 통계 작업 흐름, 결과 해석, 논문 보고
-지원이 필요할 때 사용합니다.
+Codex 스킬 디렉터리에 이 저장소를 설치하거나 연결합니다. 버전 확인과
+업데이트가 가능하도록 git checkout 설치를 우선합니다.
 
-예시 경로: `~/.codex/skills/kaic-research-skills/`
+```bash
+git clone https://github.com/kaicot/kaic-research-skills.git ~/.codex/skills/kaic-research-skills
+```
+
+작업치료 및 보건의료 연구와 관련된 분석 계획, 통계 작업 흐름, 결과 해석,
+논문 보고 지원이 필요할 때 사용합니다.
 
 ### Claude Code
 
@@ -204,6 +247,28 @@ Claude Code에서 핵심 스킬 파일은 다음 위치에 있어야 합니다.
 `~/.claude/skills/kaic-research-skills/SKILL.md`
 
 스킬의 핵심 동작 방식과 작업 분기 규칙은 `SKILL.md`에 정의되어 있습니다.
+
+## Agent 사용 순서
+
+1. 가능하면 git checkout으로 설치하거나 업데이트합니다. 단순 복사 설치는
+   버전 확인이 불가능합니다.
+2. `git describe --tags --always`로 설치 버전을 확인합니다.
+3. 연구분석, 해석, 표, 논문 작성 요청은 먼저 `SKILL.md`를 읽습니다.
+4. `SKILL.md`의 mode routing 표에 따라 필요한 reference 파일만 읽습니다.
+5. KCHS / 지역사회건강조사 작업은 비공개 companion skill인
+   `kaic-chs-analysis`가 설치되어 있는지 확인하고, KCHS 설계변수, 결측,
+   점수화, SPSS 복합표본 syntax, PROCESS 제한은 그 스킬을 기준으로 합니다.
+6. KCHS 작업인데 `kaic-chs-analysis`가 없다면 비공개 GitHub 저장소 접근
+   권한을 확인한 뒤 먼저 설치합니다.
+7. tag나 release를 만들기 전 `quick_validate.py`로 검증합니다.
+
+Agent 안전 규칙:
+
+- 원자료, 제한 연구자료, 식별 가능 정보, 공개 전 원고, 인증정보, 비공개
+  연구 문서를 저장하지 않습니다.
+- public 저장소인 이 repo에 `kaic-chs-analysis`의 private 세부 구현을
+  중복 복사하지 않습니다.
+- 검증되지 않은 참고문헌을 임의로 만들지 않습니다.
 
 ## KCHS 연동
 
@@ -249,8 +314,9 @@ git -C ~/.codex/skills/kaic-research-skills pull --ff-only
 단순 복사로 설치된 경우에는 버전 확인이 불가능하므로 폴더를 교체하거나 다시
 설치합니다.
 
-## 상태
+## 릴리스 이력
 
-Table 모드 추가 (통계 출력 → APA Word 표 생성).
-참고문헌 검증 기능 추가 (풀 우선 방식, 3단계 검증).
-KCHS 라우팅 추가 (`kaic-chs-analysis` 연동).
+| 버전 | 날짜 | 요약 |
+|---|---:|---|
+| `v0.1.1` | 2026-07-09 | Agent 설치/사용 지침, 릴리스 이력, agent metadata 정리. |
+| `v0.1.0` | 2026-07-09 | 참고문헌 검증, APA table mode, `kaic-chs-analysis` 연동을 포함한 최초 버전 기준. |
