@@ -3,8 +3,9 @@
 ## Table of Contents
 
 1. Required design information
-2. Workflow
-3. Reporting
+2. KCHS routing
+3. Workflow
+4. Reporting
 
 ## Required Design Information
 
@@ -17,6 +18,14 @@ Use the source guide to identify:
 - variance-estimation cautions from the source.
 
 Do not treat an ordinary convenience weight as a complete survey design.
+
+## KCHS Routing
+
+For Korea Community Health Survey (KCHS, 지역사회건강조사) raw data, use
+`kaic-chs-analysis` as the source of truth for survey design and SPSS syntax.
+KCHS uses `kstrata`, `SPOT_NO`, and `wt_p`; never drop cases before
+design-based subgroup analysis. Keep this document for general survey
+reasoning and reporting structure.
 
 ## Workflow
 

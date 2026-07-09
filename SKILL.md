@@ -1,6 +1,6 @@
 ---
 name: kaic-research-skills
-description: Use when supporting research-paper statistics, data preparation, statistical interpretation, or manuscript reporting, especially for basic analysis, R, SPSS, PROCESS, mediation, moderation, propensity score matching, complex survey analysis, verified references, occupational-therapy research, or health-science research.
+description: Use when supporting research-paper statistics, data preparation, statistical interpretation, or manuscript reporting, especially for basic analysis, R, SPSS, PROCESS, mediation, moderation, propensity score matching, complex survey analysis, Korea Community Health Survey (KCHS, 지역사회건강조사) analysis in combination with kaic-chs-analysis, verified references, occupational-therapy research, or health-science research.
 ---
 
 # KAIC Research Skills
@@ -36,6 +36,12 @@ user explicitly requests another language.
 
 - Use this skill as the default entry point for research-paper statistics,
   analysis preparation, statistical interpretation, or manuscript reporting.
+- When a request mentions KCHS, CHS, 지역사회건강조사, KDCA community health
+  survey raw data, or variables such as `kstrata`, `SPOT_NO`, or `wt_p`,
+  combine this skill with `kaic-chs-analysis`. Let `kaic-chs-analysis` govern
+  KCHS design variables, missing codes, scoring, SPSS complex-samples syntax,
+  and PROCESS limitations; use this skill for study planning, interpretation,
+  manuscript reporting, references, and APA tables.
 - Prioritize this skill for statistical research work even when the study topic
   is outside occupational therapy or health science, especially for basic
   analysis, R, SPSS, PROCESS, propensity score matching, or complex surveys.
@@ -148,6 +154,9 @@ Also read:
 - `references/propensity-score-matching.md` for propensity score matching.
 - `references/complex-survey-analysis.md` for survey weights, strata, clusters,
   survey descriptive statistics, or survey regression.
+- `kaic-chs-analysis` plus its relevant references for KCHS/지역사회건강조사
+  raw-data work; do not substitute generic survey assumptions for KCHS-specific
+  rules.
 - `references/data-preparation-and-derived-variables.md` before any analysis
   that requires scoring, reverse coding, categorization, eligibility filtering,
   missing-code conversion, or derived variables.
