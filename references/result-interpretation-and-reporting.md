@@ -5,7 +5,8 @@
 1. Interpretation intake
 2. Statistical interpretation
 3. Manuscript reporting
-4. Common cautions
+4. Reviewer-resistant result checks
+5. Common cautions
 
 ## Interpretation Intake
 
@@ -39,6 +40,25 @@ Provide a separate paper-facing block when requested or useful:
 - recommended table labels, columns, and footnotes;
 - limited Discussion implication;
 - wording that avoids causal overreach.
+
+## Reviewer-Resistant Result Checks
+
+Before finalizing Results, make three checks that commonly prevent reviewer
+misinterpretation:
+
+- Reconcile the eligible cohort, outcome-valid respondents, and each
+  model-specific analytic sample numerically. State the exact missing count
+  when it explains a gap rather than leaving the reader to infer it.
+- For hierarchical models, first determine whether every model used the same
+  complete-case cohort. If so, say so and attribute coefficient changes to the
+  added adjustment blocks rather than sample turnover. If cohorts differ, do
+  not separate adjustment from sample-composition effects without an additional
+  analysis.
+- Describe a non-significant interaction as no statistical evidence that the
+  association varies across the moderator. Do not present it as proof that
+  effects are equal or identical. That claim requires a prespecified
+  equivalence margin, an equivalence test, and compatible uncertainty; when no
+  equivalence test was performed, state that limitation explicitly.
 
 ## Common Cautions
 
