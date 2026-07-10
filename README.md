@@ -169,6 +169,7 @@ git push origin main --follow-tags
 
 | Version | Date | Summary |
 |---|---:|---|
+| Unreleased | 2026-07-11 | Added reviewer-resistant Results checks for sample reconciliation, same-cohort hierarchical comparisons, and non-significant interaction/equivalence wording. |
 | `v0.1.1` | 2026-07-09 | Added agent-facing install/use guidance, release history, and refreshed agent metadata. |
 | `v0.1.0` | 2026-07-09 | Initial versioned baseline with reference verification, APA table mode, and KCHS routing to `kaic-chs-analysis`. |
 
@@ -318,5 +319,6 @@ git -C ~/.codex/skills/kaic-research-skills pull --ff-only
 
 | 버전 | 날짜 | 요약 |
 |---|---:|---|
+| 미출시 | 2026-07-11 | 표본 수 정합성, 동일 표본 계층모형 비교, 비유의 상호작용과 동등성 해석을 위한 심사자 방어형 결과 보고 점검 항목 추가. |
 | `v0.1.1` | 2026-07-09 | Agent 설치/사용 지침, 릴리스 이력, agent metadata 정리. |
 | `v0.1.0` | 2026-07-09 | 참고문헌 검증, APA table mode, `kaic-chs-analysis` 연동을 포함한 최초 버전 기준. |
