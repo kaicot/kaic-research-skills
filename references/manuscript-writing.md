@@ -28,6 +28,11 @@ For Results:
 - match the order of tables and research questions;
 - include statistics needed for the method and journal context;
 - keep coding direction clear.
+- before finalizing, apply the reviewer-resistant result checks in
+  `result-interpretation-and-reporting.md`.
+- when an interaction is non-significant and no equivalence test was performed,
+  state both that heterogeneity was not supported and that equality was not
+  established.
 
 ## Introduction and Discussion
 
