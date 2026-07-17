@@ -3,9 +3,7 @@
 Agent Skill package for occupational therapy and health-science research
 workflows, designed for use with Codex and Claude Code.
 
-Current version: `v0.1.2`
-
-Next release: `v0.1.3` (unreleased)
+Current version: `v0.1.3`
 
 Version source of truth: Git tags and GitHub Releases on `main`.
 
@@ -175,7 +173,7 @@ git push origin main --follow-tags
 
 | Version | Date | Summary |
 |---|---:|---|
-| `v0.1.3` (unreleased) | 2026-07-18 | Added advisory Codex model guidance, clarified `Sol · High` versus `Max`, and formalized SemVer release-history maintenance. |
+| `v0.1.3` | 2026-07-18 | Added advisory Codex model guidance, clarified `Sol · High` versus `Max`, and formalized SemVer release-history maintenance. |
 | `v0.1.2` | 2026-07-11 | Added reviewer-resistant Results checks for sample reconciliation, same-cohort hierarchical comparisons, and non-significant interaction/equivalence wording. |
 | `v0.1.1` | 2026-07-09 | Added agent-facing install/use guidance, release history, and refreshed agent metadata. |
 | `v0.1.0` | 2026-07-09 | Initial versioned baseline with reference verification, APA table mode, and KCHS routing to `kaic-chs-analysis`. |
@@ -191,9 +189,7 @@ Agent Skill 패키지입니다.
 있도록 구성되어 있으며, 반복적으로 사용할 수 있는 연구 지침과 분석
 템플릿을 제공합니다.
 
-현재 버전: `v0.1.2`
-
-다음 릴리스: `v0.1.3` (미출시)
+현재 버전: `v0.1.3`
 
 버전 기준: `main` 브랜치의 Git tag와 GitHub Release
 
@@ -332,7 +328,7 @@ git -C ~/.codex/skills/kaic-research-skills pull --ff-only
 
 | 버전 | 날짜 | 요약 |
 |---|---:|---|
-| `v0.1.3` (미출시) | 2026-07-18 | Codex 모델 권장사항, `Sol · High`와 `Max`의 사용 경계, SemVer 릴리스 이력 관리 규칙 추가. |
+| `v0.1.3` | 2026-07-18 | Codex 모델 권장사항, `Sol · High`와 `Max`의 사용 경계, SemVer 릴리스 이력 관리 규칙 추가. |
 | `v0.1.2` | 2026-07-11 | 표본 수 정합성, 동일 표본 계층모형 비교, 비유의 상호작용과 동등성 해석을 위한 심사자 방어형 결과 보고 점검 항목 추가. |
 | `v0.1.1` | 2026-07-09 | Agent 설치/사용 지침, 릴리스 이력, agent metadata 정리. |
 | `v0.1.0` | 2026-07-09 | 참고문헌 검증, APA table mode, `kaic-chs-analysis` 연동을 포함한 최초 버전 기준. |
