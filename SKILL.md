@@ -32,6 +32,22 @@ user explicitly requests another language.
   aliases for sustained analyses. Use safe quoting/backticks when raw names must
   appear in R code.
 
+## Codex Model Guidance
+
+When GPT-5.6 tier selection is available in Codex:
+
+- Recommend `gpt-5.6-sol` with `high` reasoning for study planning,
+  analysis-critical data preparation, statistical modeling, result
+  interpretation, and manuscript-critical work.
+- Reserve `max` for an integrated audit spanning study design, variable
+  mapping, analysis specification, model sequence, sensitivity analyses,
+  reference support, and manuscript logic.
+- Use `gpt-5.6-terra` with `high` reasoning for routine formatting, table
+  cleanup, or revision after the analysis and source checks are complete.
+- Treat this guidance as advisory. Codex does not switch models automatically,
+  and model choice never replaces executing the analysis or checking source
+  guides, codebooks, verified references, and actual output.
+
 ## Routing Priority
 
 - Use this skill as the default entry point for research-paper statistics,

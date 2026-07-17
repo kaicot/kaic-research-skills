@@ -5,6 +5,8 @@ workflows, designed for use with Codex and Claude Code.
 
 Current version: `v0.1.2`
 
+Next release: `v0.1.3` (unreleased)
+
 Version source of truth: Git tags and GitHub Releases on `main`.
 
 `kaic-research-skills` provides reusable guidance and editable templates for
@@ -136,6 +138,10 @@ See `references/apa-table-formatting.md` and `scripts/apa_table_template.R`.
 
 ## Versioning and Updates
 
+This repository follows Semantic Versioning (`MAJOR.MINOR.PATCH`). Every
+release must update `Current version`, remove any matching `unreleased` marker,
+and add a dated row to `Release History` before tagging.
+
 Check the installed version if this repo is installed as a git checkout:
 
 ```bash
@@ -169,6 +175,7 @@ git push origin main --follow-tags
 
 | Version | Date | Summary |
 |---|---:|---|
+| `v0.1.3` (unreleased) | 2026-07-18 | Added advisory Codex model guidance, clarified `Sol · High` versus `Max`, and formalized SemVer release-history maintenance. |
 | `v0.1.2` | 2026-07-11 | Added reviewer-resistant Results checks for sample reconciliation, same-cohort hierarchical comparisons, and non-significant interaction/equivalence wording. |
 | `v0.1.1` | 2026-07-09 | Added agent-facing install/use guidance, release history, and refreshed agent metadata. |
 | `v0.1.0` | 2026-07-09 | Initial versioned baseline with reference verification, APA table mode, and KCHS routing to `kaic-chs-analysis`. |
@@ -185,6 +192,8 @@ Agent Skill 패키지입니다.
 템플릿을 제공합니다.
 
 현재 버전: `v0.1.2`
+
+다음 릴리스: `v0.1.3` (미출시)
 
 버전 기준: `main` 브랜치의 Git tag와 GitHub Release
 
@@ -303,6 +312,10 @@ SPSS, R, PROCESS 출력 결과를 붙여넣고 "APA 표로 만들어줘"라고 �
 
 ## 버전관리와 업데이트
 
+이 저장소는 Semantic Versioning(`MAJOR.MINOR.PATCH`)을 사용합니다. 릴리스
+전 `현재 버전`을 갱신하고, 해당 `미출시` 표시를 제거하며, 날짜가 포함된
+릴리스 이력 행을 추가합니다.
+
 버전 기준은 `main` 브랜치의 Git tag입니다.
 
 git checkout으로 설치된 경우:
@@ -319,6 +332,7 @@ git -C ~/.codex/skills/kaic-research-skills pull --ff-only
 
 | 버전 | 날짜 | 요약 |
 |---|---:|---|
+| `v0.1.3` (미출시) | 2026-07-18 | Codex 모델 권장사항, `Sol · High`와 `Max`의 사용 경계, SemVer 릴리스 이력 관리 규칙 추가. |
 | `v0.1.2` | 2026-07-11 | 표본 수 정합성, 동일 표본 계층모형 비교, 비유의 상호작용과 동등성 해석을 위한 심사자 방어형 결과 보고 점검 항목 추가. |
 | `v0.1.1` | 2026-07-09 | Agent 설치/사용 지침, 릴리스 이력, agent metadata 정리. |
 | `v0.1.0` | 2026-07-09 | 참고문헌 검증, APA table mode, `kaic-chs-analysis` 연동을 포함한 최초 버전 기준. |
